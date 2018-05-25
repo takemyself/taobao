@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+					content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>当日</title>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./swiper/swiper-4.1.6.min.css">
+		<link rel="stylesheet" href="./css/index.css">
+		<script src="./js/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="./swiper/swiper-4.1.6.min.js"></script>
+</head>
+<body>
+<nav>
+		<div class="logo">
+				logo
+		</div>
+		<ul>
+				<li>
+						<a href="category.html" class="active">
+								全部
+						</a>
+				</li>
+				<li>
+						<a href="category.html">
+								食品
+						</a>
+				</li>
+				<li>
+						<a href="category.html">
+								家具
+						</a>
+				</li>
+				<li>
+						<a href="category.html">
+								衣服
+						</a>
+				</li>
+				<li>
+						<a href="javascript:;">
+								<img src="./img/cate.png" height="32" alt="">
+						</a>
+				</li>
+		</ul>
+</nav>
+
+<div class="swiper-container" id="swiper1">
+		<div class="swiper-wrapper">
+				<div class="swiper-slide">
+						<img src="./img/banner-1.png" width="100%" alt="">
+				</div>
+				<div class="swiper-slide">
+						<img src="./img/banner-1.png" width="100%" alt="">
+				</div>
+				<div class="swiper-slide">
+						<img src="./img/banner-1.png" width="100%" alt="">
+				</div>
+		</div>
+</div>
+
+<div style="overflow: hidden;">
+		<div class="row center">
+				<a href="content.html" class="col-xs-12 p30">
+						<div class="col-xs-5">
+								<img src="./img/pic-3.png" height="140" alt="">
+						</div>
+						<div class="col-xs-7" style="height: 140px;overflow: hidden;">
+								<div class="row fontSize_title">
+										爆款 2G独显 4G内存 15.6英寸轻薄金属外壳
+								</div>
+								<div class="row fontSize_mess">
+										940显卡
+								</div>
+								<div class="row">
+										<div class="col-xs-6 m_p_zreo fontSize_cat">天猫价：999</div>
+										<div class="col-xs-6 fontSize_buy">320人已购</div>
+								</div>
+								<div class="row center_price">
+										<div class="col-xs-6 m_p_zreo fontSize_now">¥19.00</div>
+										<div class="col-xs-6">
+												<div class="juan" style="background-image:url('./img/jaun-1.png') ">
+														10元 券
+												</div>
+										</div>
+								</div>
+						</div>
+				</a>
+				<a href="content.html" class="col-xs-12 p30">
+						<div class="col-xs-5">
+								<img src="./img/pic-3.png" height="140" alt="">
+						</div>
+						<div class="col-xs-7" style="height: 140px;overflow: hidden;">
+								<div class="row fontSize_title">
+										爆款 2G独显 4G内存 15.6英寸轻薄金属外壳
+								</div>
+								<div class="row fontSize_mess">
+										940显卡
+								</div>
+								<div class="row">
+										<div class="col-xs-6 m_p_zreo fontSize_cat">天猫价：999</div>
+										<div class="col-xs-6 fontSize_buy">320人已购</div>
+								</div>
+								<div class="row center_price">
+										<div class="col-xs-6 m_p_zreo fontSize_now">¥19.00</div>
+										<div class="col-xs-6">
+												<div class="juan" style="background-image:url('./img/jaun-1.png') ">
+														10元 券
+												</div>
+										</div>
+								</div>
+						</div>
+				</a>
+				<a href="content.html" class="col-xs-12 p30">
+						<div class="col-xs-5">
+								<img src="./img/pic-3.png" height="140" alt="">
+						</div>
+						<div class="col-xs-7" style="height: 140px;overflow: hidden;">
+								<div class="row fontSize_title">
+										爆款 2G独显 4G内存 15.6英寸轻薄金属外壳
+								</div>
+								<div class="row fontSize_mess">
+										940显卡
+								</div>
+								<div class="row">
+										<div class="col-xs-6 m_p_zreo fontSize_cat">天猫价：999</div>
+										<div class="col-xs-6 fontSize_buy">320人已购</div>
+								</div>
+								<div class="row center_price">
+										<div class="col-xs-6 m_p_zreo fontSize_now">¥19.00</div>
+										<div class="col-xs-6">
+												<div class="juan" style="background-image:url('./img/jaun-1.png') ">
+														10元 券
+												</div>
+										</div>
+								</div>
+						</div>
+				</a>
+		</div>
+		<div class="row beian">XXXXXX</div>
+</div>
+</body>
+<script>
+	$(function () {
+		var mySwiper = new Swiper('#swiper1', {
+			autoplay: true,//可选选项，自动滑动
+			grabCursor : true,//手掌
+			speed:300,//滑动到结束速度
+			loop : true,//环路
+		});
+		if(mySwiper.slides.length<=3){
+			mySwiper.destroy();
+		}
+
+		var oheight=$('nav').height();
+		$('#swiper1').css({'marginTop':oheight+'px'});
+	});
+</script>
+</html>
