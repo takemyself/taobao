@@ -18,7 +18,7 @@
 		<div class="logo">
 				logo
 		</div>
-		<ul>
+		<ul style="position: relative">
 				<li>
 						<a href="category.html" class="active">
 								全部
@@ -40,10 +40,27 @@
 						</a>
 				</li>
 				<li>
-						<a href="javascript:;">
+						<a href="javascript:;" class="nav_mess">
 								<img src="./img/cate.png" height="32" alt="">
 						</a>
 				</li>
+				<div class="nav_dowm" style="padding-bottom: 30px;">
+						<div class="col-xs-4 mTop">
+								<div class="col-xs-12 fontSize_nav">
+										ss
+								</div>
+						</div>
+						<div class="col-xs-4 mTop">
+								<div class="col-xs-12 fontSize_nav">
+										ss
+								</div>
+						</div>
+						<div class="col-xs-4 mTop">
+								<div class="col-xs-12 fontSize_nav">
+										ss
+								</div>
+						</div>
+				</div>
 		</ul>
 </nav>
 
@@ -139,7 +156,41 @@
 						</div>
 				</a>
 		</div>
+		<div class="row p30">
+				<a href="" class="col-xs-8 col-xs-offset-2" style="background: #ff5044;height: 50px;border-radius: 50px;text-align: center;line-height: 50px;color: white;font-size: 20px;">
+						查看更多
+				</a>
+		</div>
 		<div class="row beian">XXXXXX</div>
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop in opas "></div>
+<div class="col-xs-10 col-xs-offset-1 index_model" style="background: white;padding: 0 0 30px 0;">
+		<div class="row">
+				<div class="col-xs-12">
+						<img src="./img/banner.png" width="100%" alt="" style="display: block;border-radius: 10px 0 0 0;">
+						<div class="closed">×</div>
+				</div>
+		</div>
+		<div class="col-xs-12" style="height: 100px;overflow: hidden;">
+				<div class="fontSize_title">
+						爆款 2G独显 4G内存 15.6英寸轻薄金属外壳
+				</div>
+				<div class="center_price">
+						<div class="col-xs-6 m_p_zreo fontSize_now">¥19.00</div>
+						<div class="col-xs-6">
+								<div class="juan" style="background-image:url('./img/jaun-1.png') ">
+										10元 券
+								</div>
+						</div>
+				</div>
+		</div>
+		<div class="row p30">
+				<a href="" class="col-xs-8 col-xs-offset-2 copyed" style="background: #ff5044;height: 50px;border-radius: 50px;text-align: center;line-height: 50px;color: white;font-size: 20px;">
+						立即查看
+				</a>
+		</div>
 </div>
 </body>
 <script>
@@ -156,6 +207,24 @@
 
 		var oheight=$('nav').height();
 		$('#swiper1').css({'marginTop':oheight+'px'});
+
+		var sta=true;
+		$('.nav_mess').click(function () {
+			if (sta){
+				$('.nav_dowm').show();
+				sta=false;
+			}else {
+				$('.nav_dowm').hide();
+				sta=true;
+			}
+		});
+
+
+		$('.closed').click(function () {
+			$('.opas').addClass('opa');
+			$('.index_model').addClass('opa');
+		});
+
 	});
 </script>
 </html>
